@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+double convertInchToCentimeters(double inchCount)
+{
+	return inchCount * 2.54;
+}
+
+/* вычисление площади прямоугольника */
+double rectangleSquare(double a, double b)
+{
+	return a * b;
+}
+
+void main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	double inchCount = 5.4;
+	cout << "Преобразование дюймов в сантиметры: " << endl << "дюймов: " << inchCount << " = сантиметров: " << convertInchToCentimeters(inchCount) << endl << endl;
+
+	double a = 7.2;
+	double b = 9.5;
+	cout << "Вычисление площади прямоугольника: " << endl << "длина: " << a << " ; ширина: " << b << endl;
+	cout << "Площадь = " << rectangleSquare(a, b) << endl;
+
+	system("pause");
+}
